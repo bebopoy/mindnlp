@@ -127,6 +127,7 @@ CONFIG_MAPPING_NAMES = OrderedDict(
         ("phi", "PhiConfig"),
         ("phi3", "Phi3Config"),
         ("plbart", "PLBartConfig"),
+        ("prophetnet", "ProphetNetConfig"),
         ("qdqbert", "QDQBertConfig"),
         ("qwen2", "Qwen2Config"),
         ("qwen2_moe", "Qwen2MoeConfig"),
@@ -766,8 +767,8 @@ class _LazyConfigMapping(OrderedDict):
 
         Raises:
             KeyError: If the key is not found in either _extra_content or _mapping, a KeyError is raised.
-            AttributeError: 
-                If the attribute associated with the value corresponding to the key is not found in the dynamically imported module, 
+            AttributeError:
+                If the attribute associated with the value corresponding to the key is not found in the dynamically imported module,
                 an AttributeError is raised.
             ModuleNotFoundError: If the required module is not found during dynamic import, a ModuleNotFoundError is raised.
         """
